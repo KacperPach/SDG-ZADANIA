@@ -10,12 +10,15 @@ The assignment required selecting and implementing 6 features from a provided li
 
 Based on the assignment instructions, the following 6 tasks were selected and implemented:
 
-1.  **TODO**
-2.  **TODO**
+1.  **catanimation.py:**
+   - Extend the game by adding second cat with different directions. \
+     Each cat should move independently and bounce off the edges of the screen
+     ![Moving Cat](https://github.com/user-attachments/assets/3ee81046-3b37-443e-90e7-d90df89bd5f3)
 3.  **TODO**
 4.  **TODO**
 5.  **TODO**
 6.  **TODO**
+7.  **TODO**
 
 *(Please refer to the source code files for the specific implementation details of each task.)*
 
