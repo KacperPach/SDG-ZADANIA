@@ -14,11 +14,14 @@ Based on the assignment instructions, the following 6 tasks were selected and im
    - Extend the game by adding second cat with different directions. \
      Each cat should move independently and bounce off the edges of the screen
      ![Moving Cat](https://github.com/user-attachments/assets/3ee81046-3b37-443e-90e7-d90df89bd5f3)
-3.  **TODO**
+2.  **wormy.py:**
+   - Add a feature to display a "Pause" message and pause \
+     the game when the player presses the P key. (unpauses on any key) \
+     ![Screen Recording 2025-05-12 201024](https://github.com/user-attachments/assets/8e6a46c9-75a0-40a8-b901-dfcc66ba2302)
+
 4.  **TODO**
 5.  **TODO**
 6.  **TODO**
-7.  **TODO**
 
 *(Please refer to the source code files for the specific implementation details of each task.)*
 
