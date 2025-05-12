@@ -16,9 +16,14 @@ catx = 10
 caty = 10
 direction = 'right'
 
+catBx = 280
+catBy = 220
+directionB = 'up'
+
 while True: # the main game loop
     DISPLAYSURF.fill(WHITE)
 
+    #Cat A logic
     if direction == 'right':
         catx += 5
         if catx == 280:
@@ -37,6 +42,26 @@ while True: # the main game loop
             direction = 'right'
 
     DISPLAYSURF.blit(catImg, (catx, caty))
+
+    #Cat B Logic
+    if directionB == 'right':
+        catBx += 5
+        if catBx == 280:
+            directionB = 'up'
+    elif directionB == 'down':
+        catBy += 5
+        if catBy == 220:
+            directionB = 'right'
+    elif directionB == 'left':
+        catBx -= 5
+        if catBx == 10:
+            directionB = 'down'
+    elif directionB == 'up':
+        catBy -= 5
+        if catBy == 10:
+            directionB = 'left'
+
+    DISPLAYSURF.blit(catImg, (catBx, catBy))
 
     for event in pygame.event.get():
         if event.type == QUIT:
