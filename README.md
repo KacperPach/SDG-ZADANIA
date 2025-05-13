@@ -18,7 +18,9 @@ Based on the assignment instructions, the following 6 tasks were selected and im
    - Add a feature to display a "Pause" message and pause \
      the game when the player presses the P key. (unpauses on any key) \
      ![Screen Recording 2025-05-12 201024](https://github.com/user-attachments/assets/8e6a46c9-75a0-40a8-b901-dfcc66ba2302)
-
+3. **simulate.py:**
+     - Add a feature to display a "Game Over" message when the player loses.\
+       ![simulate](https://github.com/user-attachments/assets/98640016-43bb-49b3-9160-2f9186c2684e)
 4.  **TODO**
 5.  **TODO**
 6.  **TODO**
