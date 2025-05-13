@@ -39,13 +39,14 @@ REDRECT    = pygame.Rect(XMARGIN, YMARGIN + BUTTONSIZE + BUTTONGAPSIZE, BUTTONSI
 GREENRECT  = pygame.Rect(XMARGIN + BUTTONSIZE + BUTTONGAPSIZE, YMARGIN + BUTTONSIZE + BUTTONGAPSIZE, BUTTONSIZE, BUTTONSIZE)
 
 def main():
-    global FPSCLOCK, DISPLAYSURF, BASICFONT, BEEP1, BEEP2, BEEP3, BEEP4
+    global FPSCLOCK, DISPLAYSURF, BASICFONT, BIGFONT, BEEP1, BEEP2, BEEP3, BEEP4
 
     pygame.init()
     FPSCLOCK = pygame.time.Clock()
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
     pygame.display.set_caption('Simulate')
 
+    BIGFONT = pygame.font.Font('freesansbold.ttf', 106)
     BASICFONT = pygame.font.Font('freesansbold.ttf', 16)
     infoSurf = BASICFONT.render('Match the pattern by clicking on the button or using the Q, W, A, S keys.', 1, DARKGRAY)
     infoRect = infoSurf.get_rect()
@@ -210,6 +211,12 @@ def changeBackgroundAnimation(animationSpeed=40):
 
 
 def gameOverAnimation(color=WHITE, animationSpeed=50):
+
+    gameOverSurf = BIGFONT.render("Game Over", 1, WHITE, BLACK)
+    gameOverRect = gameOverSurf.get_rect()
+    gameOverRect.center = (WINDOWWIDTH// 2, WINDOWHEIGHT // 2)
+    DISPLAYSURF.blit(gameOverSurf, gameOverRect)
+
     # play all beeps at once, then flash the background
     origSurf = DISPLAYSURF.copy()
     flashSurf = pygame.Surface(DISPLAYSURF.get_size())
@@ -230,6 +237,7 @@ def gameOverAnimation(color=WHITE, animationSpeed=50):
                 DISPLAYSURF.blit(origSurf, (0, 0))
                 DISPLAYSURF.blit(flashSurf, (0, 0))
                 drawButtons()
+                DISPLAYSURF.blit(gameOverSurf, gameOverRect)
                 pygame.display.update()
                 FPSCLOCK.tick(FPS)
 
