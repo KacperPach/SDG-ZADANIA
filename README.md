@@ -21,7 +21,9 @@ Based on the assignment instructions, the following 6 tasks were selected and im
 3. **simulate.py:**
      - Add a feature to display a "Game Over" message when the player loses.\
        ![simulate](https://github.com/user-attachments/assets/98640016-43bb-49b3-9160-2f9186c2684e)
-4.  **TODO**
+4. **pentomino.py:**
+     - Add a feature to display the number of lines cleared during the game in the top-right corner of the screen. \
+       ![Untitled video - Made with Clipchamp](https://github.com/user-attachments/assets/f045dbc6-e823-42e6-8903-7990955d56c8)
 5.  **TODO**
 6.  **TODO**
 
