@@ -693,6 +693,12 @@ def drawBoard(board):
 
 
 def drawStatus(score, level):
+    # draw lines cleared  
+    scoreSurf = BASICFONT.render('Lines cleared: %s' % score, True, TEXTCOLOR)
+    scoreRect = scoreSurf.get_rect()
+    scoreRect.topleft = (WINDOWWIDTH - 150, 0)
+    DISPLAYSURF.blit(scoreSurf, scoreRect)
+
     # draw the score text
     scoreSurf = BASICFONT.render('Score: %s' % score, True, TEXTCOLOR)
     scoreRect = scoreSurf.get_rect()
@@ -702,7 +708,7 @@ def drawStatus(score, level):
     # draw the level text
     levelSurf = BASICFONT.render('Level: %s' % level, True, TEXTCOLOR)
     levelRect = levelSurf.get_rect()
-    levelRect.topleft = (WINDOWWIDTH - 150, 50)
+    levelRect.topleft = (WINDOWWIDTH - 150, 40)
     DISPLAYSURF.blit(levelSurf, levelRect)
 
 
