@@ -24,7 +24,9 @@ Based on the assignment instructions, the following 6 tasks were selected and im
 4. **pentomino.py:**
      - Add a feature to display the number of lines cleared during the game in the top-right corner of the screen. \
        ![Untitled video - Made with Clipchamp](https://github.com/user-attachments/assets/f045dbc6-e823-42e6-8903-7990955d56c8)
-5.  **TODO**
+5.  **inkspill.py:**
+     - Add a feature to display the number of moves the player has made during the game in the top-left corner of the screen. \
+       ![inskpill](https://github.com/user-attachments/assets/7f3f9096-bbb5-49c2-bac4-81b396ead71e)
 6.  **TODO**
 
 *(Please refer to the source code files for the specific implementation details of each task.)*
