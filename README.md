@@ -27,7 +27,9 @@ Based on the assignment instructions, the following 6 tasks were selected and im
 5.  **inkspill.py:**
      - Add a feature to display the number of moves the player has made during the game in the top-left corner of the screen. \
        ![inskpill](https://github.com/user-attachments/assets/7f3f9096-bbb5-49c2-bac4-81b396ead71e)
-6.  **TODO**
+6.  **gemgem.py:**
+     - Add a feature to display a timer at the top of the screen that counts down from a set time limit (e.g., 2 minutes). When the timer reaches zero, the game ends. \
+      ![candycrush](https://github.com/user-attachments/assets/49f5340c-5790-43c9-b946-35a77fc16b8a)
 
 *(Please refer to the source code files for the specific implementation details of each task.)*
 
@@ -48,10 +50,6 @@ Based on the assignment instructions, the following 6 tasks were selected and im
     python catanimation.py
     ```
     Replace `catanimation.py` with the name of the file you want to run.
-
-## Screenshots
-
-TODO
 
 ---
 
