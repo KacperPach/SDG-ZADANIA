@@ -122,8 +122,11 @@ def runGame():
     gameIsOver = False
     lastScoreDeduction = time.time()
     clickContinueTextSurf = None
+    clock = pygame.time.Clock()
+    timeleft = 2 * 60 * 1000 # 2 mins in ms
 
     while True: # main game loop
+        clock.tick()
         clickedSpace = None
         for event in pygame.event.get(): # event handling loop
             if event.type == QUIT or (event.type == KEYUP and event.key == K_ESCAPE):
@@ -212,6 +215,18 @@ def runGame():
         # Draw the board.
         DISPLAYSURF.fill(BGCOLOR)
         drawBoard(gameBoard)
+        #draw time left
+        timeleft -= clock.get_time()
+
+        if timeleft < 1:
+            gameIsOver = True
+            timeleft = 0 # so the timer doesn't go into negatves after game is over
+
+        timerText = BASICFONT.render('time left: %ss' % (timeleft//1000), 1, (255,255,255))
+        timerRect = timerText.get_rect()
+        timerRect.topleft = (1,1)
+        DISPLAYSURF.blit(timerText, timerRect)
+
         if firstSelectedGem != None:
             highlightSpace(firstSelectedGem['x'], firstSelectedGem['y'])
         if gameIsOver:
